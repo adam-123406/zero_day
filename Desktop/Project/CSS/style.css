@@ -13,7 +13,10 @@ body{
     width: 100%;
     overflow: hidden;
 }
-.sidebar{
+div{
+    display: block;
+}
+/* .sidebar{
     position: fixed;
     top: 0;
     left: 0;
@@ -21,23 +24,28 @@ body{
     width: 240px;
     background: #03011d;
     padding: 6px 14px;
-}
+} */
 .sidebar{
-    position: fixed;
+position: fixed;
     top: 0;
     left: 0;
     height: 100%;
     width: 78px;
-    background: #11101d;
-padding: 6px 14px;
-transition: all 0.5s ease;
+    background: #03011d;
+    padding: 6px 14px;
+    transition: all 0.5s ease;
 }
 .sidebar .active{
-    width: 240px;
+    width:240px;
+}
+
+.sidebar.active ~ .home_content{
+    width: calc(100% - 240px);
+    left: 240px;
 }
 .sidebar .logo_content .logo{
-    color: #fff;
-    display:flex;
+color: #fff;
+display:flex;
 height: 50px;
 width: 100%;
 display: flex;
@@ -128,7 +136,7 @@ top: 6px;
     left: 90%;
 }
 .sidebar ul{
-    margin-top: 20px;
+    margin-top: 25px;
 }
 .sidebar ul{
     margin-top: 20px;
@@ -318,6 +326,12 @@ background: #1d1b31;
     width: calc(100% - 240px);
     left: 240px;
     transition: all 0.5s ease;
+
+    position: absolute;
+    height: 100%;
+    width: calc(100% - 240px);
+    left: 240px;
+    transition: all 0.4s ease;
 }
 .home_content .text{
     font-size: 25px;
@@ -325,10 +339,7 @@ background: #1d1b31;
     color: #1d1b31;
     margin-top: 12px;
 }
-.sidebar.active ~ .home_content{
-    width: calc(100% - 240px);
-    left: 240px;
-}
+
 
 
 

@@ -5,14 +5,15 @@
         <title>
         </title>
         <link rel="stylesheet" href="CSS/style.css">
+        <script href="Javascript/script.js"></script>
         <link href='https://unpkg.com/boxicons@2.1.1/css/boxicons.min.css' rel='stylesheet'>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
- <div class="sidebar">
+ <div class="sidebar active">
 <div class="logo_content">
 <div class="logo">
-<i class='bx bxl-c-plus-plus'></i>
+<i class='bx bxs-home'></i>
 <div class="logo_name">Rentals management system</div>
 </div>
 <i class='bx bx-menu' id="btn"></i>
@@ -95,20 +96,10 @@
 </div>
 </div>
 <div class="home_content">
-    <div class="text">Home Content</div>
+    <div class="text"></div>
 </div>
 
-<script>
-    let btn = document.querySelector("#btn");
-    let sidebar = document.querySelector(".sidebar");
-        let sidebarbtn = document.querySelector(".bx bx-search");
 
-btn.onclick = function() {
-sidebar.classList.toggle("active");
-}
-sidebarbtn.onclick = function() {
-sidebar.classList.toggle("active");
-}
 </script>
 </body>
 </html>
